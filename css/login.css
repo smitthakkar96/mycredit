@@ -7,7 +7,6 @@ input               {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:250px;
   border:none;
   border-bottom:1px solid #757575;
 }
@@ -120,7 +119,6 @@ a:hover {
 }
 /*=== 4. Main Form ===*/
 .login-form-1 {
-  max-width: 300px;
   border-radius: 5px;
   display: inline-block;
 }
