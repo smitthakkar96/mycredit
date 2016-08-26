@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HomePage</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://use.fontawesome.com/177b3be16b.js"></script>
+    <!-- <script src="js/navbar.js"></script> -->
+
+  <style media="screen">
+
+  body{
+    overflow: hidden;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-container {
+    padding: 0px 0 20px 0;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+    background-color: #222;
+    border-color: #080808;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.navbar-brand.fixed-theme {
+    font-size: 18px;
+}
+
+.navbar-container.fixed-theme {
+    padding: 0;
+}
+
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+  .username{
+    font-family: 'varela round';
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1.0%;
+    position: absolute;
+    left:84%;
+  }
+
+  .username{
+    font-family: 'varela round';
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  p,h1,h2,h3,h4 {
+    font-family: 'Varela Round';
+  }
+
+  body {
+    background-color: #efefef;
+  }
+    a, a:focus, a:hover{
+    text-decoration: none;
+    color:#fff;
+  }
+  .navbar-brand-centered {
+          position: absolute;
+          left: 0%;
+          display: block;
+          /*width: 160px;*/
+          text-align: center;
+          background-color: transparent;
+      }
+      .navbar>.container .navbar-brand-centered,
+      .navbar>.container-fluid .navbar-brand-centered {
+          margin-left: -80px;
+      }
+
+
+      .thumbnail {
+      position:relative;
+      overflow:hidden;
+      }
+
+      .caption {
+      position:absolute;
+      top:-12px;
+      right:0;
+      background:rgba(66, 139, 202, 0.75);
+      width:100%;
+      height:120%;
+      padding:2%;
+      display: none;
+      text-align:center;
+      color:#fff !important;
+      z-index:2;
+      }
+  </style>
+
+  </head>
+  <body>
+    <!-- <nav class="navbar navbar-default" role="navigation" style="background-color:#455A64;">
+
+          <div class="container">
+            <div class="navbar-brand navbar-brand-centered" style="top:-10%;">
+              <center>
+                <div class="navbar-brand navbar-brand-centered col-md-12 col-xs-12 col-sm-12"
+                style="color:#fff;top:20%;font-family:'Varela Round';">
+                  MyCredit
+                </div>
+                <img src="img/logo.png" alt="MyCredit" width="30%" style="margin-right:100%;"/>
+              </center>
+
+            </div>
+            <div class="username">
+              hi, Harshdeep !
+            </div>
+          </div>
+    </nav> -->
+
+    <!-- Fixed navbar -->
+        <nav id="header" class="navbar">
+            <div id="header-container" class="container navbar-container" style="background-color:#455A64">
+                <div class="navbar-header">
+                    <a id="brand" class="navbar-brand" href="#">My Credit</a>
+                    <img src="img/logo.png" width="5%" alt="MyCredit LOGO" />
+                    <div class="username">
+                      hi, Harshdeep !
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+        <hr>
+
+  <div class="container" style="margin-left:15%;">
+      <div class="row">
+
+        <div class="col-md-3 col-xs-12 col-sm-10" >
+          <center>
+            <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+                <div class="caption">
+                    <a href="#">
+                    <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <img src="img/up-arrow.png" alt="...">
+            </div>
+          <a href="#"> <h2 style="color:#FFC107;">Market View</h2></a>
+          </center>
+        </div>
+
+
+            <div class="col-md-3 col-xs-12 col-sm-10">
+              <center>
+                <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+                    <div class="caption">
+                        <a href="#">
+                        <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                    <img src="img/target-1.png" alt="...">
+                </div>
+              <a href="#"> <h2 style="color:#FFC107;">Strategies</h2></a>
+              </center>
+            </div>
+
+              <div class="col-md-3 col-xs-12 col-sm-10">
+                <center>
+                  <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+                      <div class="caption">
+                          <a href="#">
+                          <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                      <img src="img/folder.png" alt="...">
+                  </div>
+                <a href="#"> <h2 style="color:#FFC107;">Portfolio</h2></a>
+                </center>
+              </div>
+
+
+    </div>
+
+  </div><!-- /.container -->
+
+  <script type="text/javascript">
+  $( document ).ready(function() {
+    $("[rel='tooltip']").tooltip();
+
+    $('.thumbnail').hover(
+        function(){
+            $(this).find('.caption').slideDown(250); //.fadeIn(250)
+        },
+        function(){
+            $(this).find('.caption').slideUp(250); //.fadeOut(205)
+        }
+    );
+  });
+  </script>
+  </body>
+</html>
