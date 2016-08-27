@@ -5,94 +5,51 @@ Silver
 Gold -->
 
 <!DOCTYPE html>
-<html>
+<html ng-app="BasicHttpAuthExample">
   <head>
     <meta charset="utf-8">
     <title>Login</title>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
 
     <!-- Login CSS -->
     <link rel="stylesheet" href="css/login.css" charset="utf-8">
     <!-- End of Login CSS -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+   
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- Login JS -->
-    <script type="text/javascript" src="js/login.js"> </script>
-
+    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
   </head>
 
   <body>
 
+      <div class="container">
+        <div class="col-md-12">
+          <div ng-view></div>
+        </div>
+      </div>
+
     <!-- Where all the magic happens -->
   <!-- LOGIN FORM -->
-  <div class="text-center" style="padding:20px 0">
-  <center>
-    <div class="login_logo">
-      <img src="img/logo.png" alt="My credit" width="10%" style="margin-bottom:2%;"/>
-    </div>
-
-    <!-- Main Form -->
-  	<div class="login-form-1">
-  		<form id="login-form" class="text-left">
-  			<div class="main-login-form">
-  				<div class="login-group">
-            <div class="logo">Login</div>
-
-<!-- Email field -->
-            <div class="form-group">
-
-              <div class="group" style="margin-top:5%;">
-                <input type="text" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label style="font-family:'Varela Round';">Email</label>
-              </div>
-
-  					</div>
-
-
-
-<!-- Password field -->
-	         <div class="form-group">
-
-              <div class="group" style="margin-top:10%;">
-                <input type="password" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label style="font-family:'Varela Round';">Password</label>
-              </div>
-
-  					</div>
-
-
-  				</div>
-
-
-          <div class="col-md-12">
-            <center><button type="submit" class="login-button" style="float:none;" onclick="location.href='homepage.html'">
-              <i class="fa fa-chevron-right"></i></button></center>
-          </div>
-
-
-
-  			</div>
-
-  			<div class="etc-login-form">
-  				<p>not a member? <a href="register.html" style="color:#CFB53B;">Join Now</a></p>
-  			</div>
-
-  		</form>
-  	 </div>
-    </center>
-  	<!-- end:Main Form -->
-  </div>
-
-
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/login.js"> </script>
+    <script src="http://code.angularjs.org/1.2.20/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.20/angular-route.js"></script>
+    <script src="http://code.angularjs.org/1.2.13/angular-cookies.js"></script>
+	 <script src="js/app.js"></script>
+	 <script src="modules/authentication/services.js"></script>
+    <script src="modules/authentication/controllers.js"></script>
+	    <script src="modules/home/controllers.js"></script>
+	 
 
   </body>
 </html>

@@ -1,7 +1,21 @@
 /* form starting stylings ------------------------------- */
+body{
+	background:#fff !important;
+	padding:0px !important;
+	height: 100% !important;
+}
+
+html {
+  background: #fff !important;
+  padding: 0px;
+  height: 100% !important;
+}
+.jumbotron{
+	background:#fff !important;
+}
 .group            {
   position:relative;
-  margin-bottom:45px;
+/*   margin-bottom:45px; */
 }
 input               {
   font-size:18px;
@@ -96,8 +110,9 @@ input:focus ~ .highlight {
 
 html,
 body {
-  background: #efefef;
-  padding: 10px;
+  background: #fff !important;
+  padding: 0px;
+  height: 100% !important;
   font-family: 'Varela Round';
 }
 /*=== 2. Anchor Link ===*/
@@ -126,15 +141,21 @@ a:hover {
   position: relative;
 }
 .login-form-1 .form-control {
-  border: 0;
-  box-shadow: 0 0 0;
-  border-radius: 0;
-  background: transparent;
-  color: #555555;
-  padding: 10px 0;
-  font-weight: bold;
-  height: auto;
-  font-family: 'Varela Round';
+    border: 0;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    background: #fff;
+    color: #555555;
+    padding: 6px 10px;
+    font-weight: bold;
+    height: auto;
+    font-family: 'Varela Round';
+    border: 1px solid rgb(199,195,33);
+    border-radius: 5px;
+	text-align: center;
+}
+.login-form-1 label {
+    font-size: 12px;
 }
 .login-form-1 .form-control::-webkit-input-placeholder {
   color: #9a8937;
@@ -147,17 +168,30 @@ a:hover {
 }
 .login-form-1 .form-group {
   margin-bottom: 0;
-  padding-right: 20px;
+/*   padding-right: 20px; */
   position: relative;
 }
 .login-form-1 .form-group:last-child {
   border-bottom: 0;
 }
 .login-group {
-  background: #ffffff;
+  background: #eee;
   color: #999999;
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: 0px;
+  padding: 30px 20px 40px;
+  border: 2px solid rgb(199,195,33);
+  display: inline-block;
+  width: 100%;
+}
+.not-mem p {
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.login-form-1 label {
+    font-size: 12px;
+    width: 96%;
+    text-align: center;
 }
 .login-group-checkbox {
   padding: 5px 0;
@@ -356,8 +390,88 @@ label:hover:before {
 }
 /*=== 9. Misc ===*/
 .logo {
-  padding: 15px 0;
-  font-size: 25px;
-  color: #CFB53B;
-  font-weight: bold;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+button.login-button-1 {
+    width: 100%;
+    margin-top: 10%;
+    background: rgb(199,195,33);
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    padding: 6px 0;
+}
+.sign-up input {
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    background: #fff;
+    color: #555555;
+    padding: 3px 10px;
+    font-weight: bold;
+    height: auto;
+    font-family: 'Varela Round';
+    border: 1px solid rgb(199,195,33);
+    border-radius: 5px;
+    text-align: center;
+}
+.group.sign-up {
+    margin-top: 10px;
+}
+button.login-button-11 {
+    width: 51%;
+    margin-top: 10%;
+    background: rgb(199,195,33);
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    padding: 3px 0;
+}
+a#brand {
+    color: #000;
+}
+nav#header {
+    margin: 0 !important;
+}
+.tab-out {
+    text-align: center;
+}
+.tab-out {
+    text-align: center;
+    background: #eee;
+    border: 1px solid rgb(199,195,33);
+}
+.tabs-start {
+    width: 100%;
+    display: inline-block;
+}
+.padding-0 {
+    padding: 0 !important;
+}
+.tab-out p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 27px;
+}
+.tab-1-cont {
+    margin: 56px auto 0;
+    width: 94%;
+}
+.tab-cont {
+    position: relative;
+}
+a.anch {
+    position: absolute;
+    top: 46%;
+    width: 100%;
+    left: 0;
+}
+.home-out {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    color: #777777;
 }
