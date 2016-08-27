@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Strategies</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"   integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="   crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" ></script>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <script src="https://use.fontawesome.com/177b3be16b.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://d3js.org/d3.v2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.8/angular-nvd3.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/nvd3.css" media="screen" title="no title" charset="utf-8">
+
+    <link rel="stylesheet" href="css/custom.css" media="screen" title="no title" charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <style media="screen">
+
+    a,p,h1,h2,h3 {
+      font-family: 'varela round';
+    }
+    body {
+          padding-top: 50px;
+          position: relative;
+          font-weight:400;
+          overflow-y: scroll;
+          overflow-x:hidden;
+      }
+
+      /*.sxandxs,.col-xs-12 {
+        left : -22%;
+      }*/
+
+      .navbar-inverse .navbar-nav>.active>a,
+      .navbar-inverse .navbar-nav>.active>a:focus,
+      .navbar-inverse .navbar-nav>.active>a:hover{
+        color: #fff;
+        background-color: #455A64;
+      }
+      .navbar-inverse .navbar-nav>li>a{
+        color: #fff;
+      }
+      .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+        color: #efefef;
+      }
+
+      .show-on-hover:hover > ul.dropdown-menu {
+    display: block;
+}
+
+      pre {
+          tab-size: 8;
+      }
+
+      @media screen and (max-width: 768px) {
+          .side-collapse-container{
+              width:100%;
+              position:relative;
+              left:0;
+              transition:left .4s;
+          }
+          .side-collapse-container.out{
+              left:200px;
+          }
+          .side-collapse {
+              top:50px;
+              bottom:0;
+              left:-30%;
+              width:200px;
+              position:fixed;
+              overflow:hidden;
+              transition:width .4s;
+          }
+          .side-collapse.in {
+              width:0;
+          }
+      }
+    </style>
+
+  </head>
+  <body>
+
+<header role="banner" class="navbar navbar-fixed-top navbar-inverse" style="background-color:#607D8B;">
+    <div class="container">
+
+<!-- LOGO and Brand Text -->
+      <!-- <a href="homepage.html"> -->
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          <div class="navbar-brand navbar-brand-centered col-md-4 hidden-xs hidden-sm"
+          style="color:#fff; margin-left:-6%;">
+            MyCredit
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-8">
+              <img src="img/logo.png" alt="MyCredit" style="width: 52%;margin-top:5%;margin-left: 124%;"/>
+          </div>
+        </div>
+      <!-- </a> -->
+<!-- Navbar Starts From Here -->
+        <div class="navbar-header">
+          <button data-toggle="collapse-side" data-target=".side-collapse"
+          data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left" style="margin-left: -63%;">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Navbar Menu -->
+        <div class="navbar-inverse side-collapse in col-md- col-sm-4 col-xs-8"
+        style="margin-left: -5%;left: -3%;background-color:#607D8B;">
+          <nav role="navigation" class="navbar-collapse" style="margin-left: 4%;margin-right: 0%;">
+            <ul class="nav navbar-nav">
+
+              <li class="active"><a href="#">Strategies</a></li>
+
+              <li><a href="mview.html">Market View</a></li>
+
+              <li><a href="portfolio.html">Portfolio</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Current User's Name  -->
+        <div class="col-md-4 hidden-xs hidden-sm username col-md-4 col-sm-4 col-xs-8" style="top:0;">
+          hi, Harshdeep !
+        </div>
+
+      </div>
+    </header>
+
+<!-- Main Body -->
+<center>
+
+<!-- Heading with dropdown selection-->
+    <div class="container">
+       <div class="row">
+          <select style="width: 12%;margin-top:4%;margin-left:-4%;height: 30px;">
+            <ul class="dropdown-menu" role="menu">
+              <li><option value="new">New Strategy</option></li>
+              <li class="divider"></li>
+              <li><option value="existing">Existing Strategy</option></li>
+            </ul>
+        </select>
+      </div>
+    </div>
+</center>
+
+          <!-- New Strategies -->
+  <div class="container new box" style="margin-left: 24%;margin-top: 2%;">
+    <center><h2 class="col-sm-8 col-xs-12" style="margin-right:50%;color:#607D8B;right: 8%;">Create New Strategy</h2></center>
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 col-xs-8" >
+          <center>
+            <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+                <div class="caption">
+                    <a href="#">
+                    <i class="fa fa-plus fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <img src="img/add.png" alt="...">
+            </div>
+          <a href="#"> <h3 style="color:#FFC107;">Build Custom</h3></a>
+          </center>
+        </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-8">
+              <center>
+                <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+                    <div class="caption">
+                        <a href="#">
+                        <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                    <img src="img/select-object.png" alt="Choose Strategy">
+                </div>
+              <a href="#"> <h3 style="color:#FFC107;">Choose Standard</h3></a>
+              </center>
+            </div>
+
+          </div>
+        </div>
+
+<!-- /.container -->
+
+<!-- Existing Strategy -->
+
+<div class="container existing box" style="margin-left: 15%;margin-top: 2%;">
+  <center><h2 class="sxandxs col-md-6 col-sm-8 col-xs-12" style="margin-right:50%;color:#607D8B;left: 10%;">Choose From Existing Strategy</h2></center>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8" >
+        <center>
+          <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+              <div class="caption">
+                  <a href="#">
+                  <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                </a>
+              </div>
+              <img src="img/strategy.png" alt="Choose Strategy">
+          </div>
+        <a href="#"> <h3 style="color:#FFC107;">Lucky</h3></a>
+        </center>
+      </div>
+
+
+      <div class="col-md-3 col-sm-6 col-xs-8" >
+        <center>
+          <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+              <div class="caption">
+                  <a href="#">
+                  <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                </a>
+              </div>
+              <img src="img/strategy.png" alt="Choose Strategy">
+          </div>
+        <a href="#"> <h3 style="color:#FFC107;">Strike</h3></a>
+        </center>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8" >
+        <center>
+          <div class="thumbnail" style="box-shadow: 3px 3px 3px #888888;">
+              <div class="caption">
+                  <a href="#">
+                  <i class="fa fa-arrow-right fa-2x" style="position: relative;top: 50%;transform: translateY(-50%);" aria-hidden="true"></i>
+                </a>
+              </div>
+              <img src="img/strategy.png" alt="Choose Strategy">
+          </div>
+          <a href="#"> <h3 style="color:#FFC107;">Bold</h3></a>
+        </center>
+      </div>
+
+
+        </div>
+      </div>
+
+  <!-- DropDown Selection Script -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("select").change(function(){
+            $(this).find("option:selected").each(function(){
+                if($(this).attr("value")=="new"){
+                    $(".box").not(".new").hide();
+                    $(".new").show();
+                }
+                else if($(this).attr("value")=="existing"){
+                    $(".box").not(".existing").hide();
+                    $(".existing").show();
+                }
+                else{
+                    $(".box").hide();
+                }
+            });
+        }).change();
+    });
+    </script>
+
+  <!-- End of Slider JS -->
+  </body>
+</html>

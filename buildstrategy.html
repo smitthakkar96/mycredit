@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Build Strategy</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"   integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="   crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" ></script>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <script src="https://use.fontawesome.com/177b3be16b.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+    <script src="https://rawgit.com/rzajac/angularjs-slider/master/dist/rzslider.js"></script>
+
+    <link rel="stylesheet" href="css/rzslider.css" media="screen" title="no title" charset="utf-8">
+
+    <script src="https://d3js.org/d3.v2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.8/angular-nvd3.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/nvd3.css" media="screen" title="no title" charset="utf-8">
+
+
+
+
+    <link rel="stylesheet" href="css/custom.css" media="screen" title="no title" charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <style media="screen">
+      h4,h3,h2,h1 {
+        color: #607D8B;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div ng-app="rzSliderDemo">
+      <div ng-controller="MainCtrl" class="wrapper">
+      <header role="banner" class="navbar navbar-fixed-top navbar-inverse" style="background-color:#607D8B;">
+        <div class="container">
+
+    <!-- LOGO and Brand Text -->
+          <!-- <a href="homepage.html"> -->
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <div class="navbar-brand navbar-brand-centered col-md-4 hidden-xs hidden-sm"
+              style="color:#fff; margin-left:-6%;">
+                MyCredit
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-8">
+                  <img src="img/logo.png" alt="MyCredit" style="width: 52%;margin-top:5%;margin-left: 124%;"/>
+              </div>
+            </div>
+          <!-- </a> -->
+    <!-- Navbar Starts From Here -->
+            <div class="navbar-header">
+              <button data-toggle="collapse-side" data-target=".side-collapse"
+              data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left" style="margin-left: -63%;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Navbar Menu -->
+            <div class="navbar-inverse side-collapse in col-md- col-sm-4 col-xs-8"
+            style="margin-left: -5%;left: -3%;background-color:#607D8B;">
+              <nav role="navigation" class="navbar-collapse" style="margin-left: 4%;margin-right: 0%;">
+                <ul class="nav navbar-nav">
+
+                  <li class="active"><a href="#">Strategies</a></li>
+
+                  <li><a href="mview.html">Market View</a></li>
+
+                  <li><a href="portfolio.html">Portfolio</a></li>
+
+                </ul>
+              </nav>
+            </div>
+            <!-- Current User's Name  -->
+            <div class="col-md-4 hidden-xs hidden-sm username col-md-4 col-sm-4 col-xs-8" style="top:0;">
+              hi, Harshdeep !
+            </div>
+          </div>
+        </header>
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <center>
+
+        <h2 style="color:#607D8B;">Build Strategy</h2>
+
+          <form>
+            <h4 style="color:#607D8B;">Name of the Strategy : <input type="text" ng-model="firstname"></h4>
+          </form>
+        <h2 style="color:#FFC107;">" {{firstname}} "</h2>
+
+
+      </center>
+
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+
+      <h3>Monthly :</h3>
+      <div class="box-class">
+        <h4 style="color:#FFC107;">Target Return :</h4>
+        <rzslider rz-slider-model="slider_visible_bar.value" rz-slider-options="slider_visible_bar.options"></rzslider>
+        <hr style="border-top:1px solid #607D8B;">
+        <h4 style="color:#FFC107;">Additional Filters :</h4>
+        <rzslider rz-slider-model="slider_visible_bar.value" rz-slider-options="slider_visible_bar.options"></rzslider>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <script>
+    angular.module('rzSliderDemo', ['rzModule', 'ui.bootstrap']).
+    controller('MainCtrl', function ($scope, $rootScope, $timeout, $modal) {
+        //Minimal slider config
+
+        //Slider with selection bar
+    $scope.slider_visible_bar = {
+        value: 10,
+        options: {
+            showSelectionBar: true
+        }
+    };
+    });
+
+    </script>
+
+  </body>
+</html>
