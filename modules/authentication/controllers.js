@@ -22,7 +22,7 @@ angular.module('Authentication')
         };
 		
 		$scope.register = function () {
-            alert('dfd');
+           
 		
                     $location.path('/');
                

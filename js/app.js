@@ -3,10 +3,12 @@
 // declare modules
 angular.module('Authentication', []);
 angular.module('Home', []);
+angular.module("nvd3TestApp", ['nvd3ChartDirectives']);
 
 angular.module('BasicHttpAuthExample', [
     'Authentication',
     'Home',
+	'nvd3TestApp',
     'ngRoute',
     'ngCookies'
 ])
@@ -28,6 +30,11 @@ angular.module('BasicHttpAuthExample', [
 		.when('/register', {
             controller: 'LoginController',
             templateUrl: 'modules/home/views/register.html'
+        })
+		
+		.when('/mystrategies', {
+            controller: 'ExampleCtrl',
+            templateUrl: 'modules/graph/views/strategy.html'
         })
  
         .otherwise({ redirectTo: '/mycredit' });

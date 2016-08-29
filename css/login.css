@@ -475,3 +475,88 @@ a.anch {
     margin-top: 35px;
     color: #777777;
 }
+.selec-outer {
+    margin-top: 12px;
+}
+.selec-outer select.selectpicker {
+    width: 100%;
+	font-size: 16px;
+	border: 2px solid rgb(199,195,33) !important;
+}
+p.st1
+{
+	background: rgb(199,195,33) !important;
+}
+.abc {
+   /*  width: 100%; */
+}
+.outer {
+    margin-top: 77px;
+    float: left;
+    width: 80%;
+    margin: 77px auto;
+}
+.abc-inner {
+    margin: 0 auto;
+    width: 329px;
+    height: 358px;
+    border: 2px solid rgb(199,195,33) !important;
+    padding: 0 px;
+	margin-bottom: 36px;
+	background: #ccc;
+}
+.abc-inner h2 {
+    text-align: center;
+    color: #fff !important;
+	text-decoration: underline !important;
+	font-size: 44px;
+}
+svg {
+    height: 84% !important;
+}
+.build {
+    height: 317px;
+    width: 400px;
+    border: 1px solid;
+    background-color: #ccc;
+}
+.hed-outer {
+    text-align: center;
+    height: 180px !important;
+    width: 245px;
+    margin: 0 auto;
+    padding-top: 45px;
+    margin-top: 50px;
+}
+.hed-outer h3 {
+    font-size: 26px;
+	text-align: center;
+    color: #fff !important;
+}
+.hed-outer h4
+{
+	font-size: 23px;
+	text-align: center;
+    color: #fff !important;
+}
+.new-str h1
+{
+	font-size: 21px;
+    font-weight: bold;
+    color: #ccc;
+}
+.new-str h5
+{
+	font-size: 19px;
+    padding-left: 32px;
+}
+.abc-inner1 {
+    margin: 0 auto;
+    width: 415px;
+    height: 358px;
+    border: 2px solid rgb(199,195,33) !important;
+    padding: 0 px;
+    margin-bottom: 36px;
+    background: #ccc;
+	text-align: center;
+}

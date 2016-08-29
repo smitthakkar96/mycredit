@@ -3,6 +3,7 @@
 // declare modules
 angular.module('Authentication', []);
 angular.module('Home', []);
+angular.module('nvd3TestApp', ['nvd3ChartDirectives']);
 
 angular.module('BasicHttpAuthExample', [
     'Authentication',
