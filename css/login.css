@@ -441,19 +441,18 @@ nav#header {
 }
 .tab-out {
     text-align: center;
-    background: #eee;
     border: 1px solid rgb(199,195,33);
 }
 .tabs-start {
     width: 100%;
     display: inline-block;
 }
-.padding-0 {
+/* .padding-0 {
     padding: 0 !important;
-}
+} */
 .tab-out p {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 27px;
 }
 .tab-1-cont {
@@ -491,10 +490,9 @@ p.st1
    /*  width: 100%; */
 }
 .outer {
-    margin-top: 77px;
-    float: left;
+    /* float: left; */
     width: 80%;
-    margin: 77px auto;
+    margin: 170px auto;
 }
 .abc-inner {
     margin: 0 auto;
@@ -511,9 +509,7 @@ p.st1
 	text-decoration: underline !important;
 	font-size: 44px;
 }
-svg {
-    height: 84% !important;
-}
+
 .build {
     height: 317px;
     width: 400px;
@@ -552,11 +548,162 @@ svg {
 }
 .abc-inner1 {
     margin: 0 auto;
-    width: 415px;
-    height: 358px;
-    border: 2px solid rgb(199,195,33) !important;
+    /*width: 415px;*/
+    height: 309px;
+    border: 4px solid rgb(199,195,33) !important;
     padding: 0 px;
     margin-bottom: 36px;
     background: #ccc;
 	text-align: center;
+}
+.abc-inner1 h2 {
+    margin-top: 0;
+}
+svg {
+    height: 64% !important;
+}
+/************************ ion.html*************************************/
+
+.range-div {
+    margin-top: 5px;
+    border: 4px solid #ddd;
+    padding: 5px;
+}
+.graph-div {
+    margin-top: 37px;
+    border: 4px solid #ddd;
+    padding: 6px;
+}
+.irs-line {
+    height: 12px;
+    top: 25px;
+    border: 3px solid rgb(199,195,33);
+}
+.third-section h1 {
+    font-size: 22px;
+    text-align: center;
+	margin-bottom: 0;
+}
+.third-section {
+    margin-top: 37px;
+    border: 4px solid #ddd;
+    padding: 3px;
+}
+
+.third-section h3 {
+	margin-top: 0;
+    font-size: 35px;
+	font-weight:600;
+    text-align: center;
+}
+.range-out-text h3
+{
+	text-align: center;
+    color: #000 !important;
+   font-size: 35px;
+   font-weight:600;
+}
+.range-out-text h4
+{
+	text-align: center;
+    color: #000 !important;
+   font-size: 25px;
+}
+ .span
+{
+	text-align: left;
+    color: #000 !important;
+   font-size: 18px;
+}
+.irs-with-grid{
+    height: 60px;
+    width: 85% !important;
+    float: right;
+}
+.label{line-height:3 !important;}
+ .label2 {
+    float: left;
+	color: #000;
+    font-size: 19px;
+	    font-weight: 700;
+		line-height: 42px;
+}
+.label span {
+    color: #000;
+    font-size: 19px;
+}
+.add-filter {
+    float: left;
+    margin-left: 20px;
+}
+.add-filter-div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+	padding: 0px 8px;
+}
+.add-filter {
+    border: 2px solid rgb(199,195,33);
+}
+.add-filter1 {
+    border: 2px solid rgb(199,195,33);
+}
+.col-md-12.fleft.graph-div h3 {
+    font-size: 19px;
+    font-weight: 700;
+}
+.aa span{
+	font-size: 18px;
+    font-weight: 700;
+ }
+.aa {
+    padding: 0px !important;
+}
+.heading h1 {
+    text-align: center;
+    color: gray;
+	margin-top: 43px;
+	    font-size: 25px;
+}
+.right-buttons {
+    margin-top: 30px;
+}
+.add-filter1 {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    margin: 2px 0px;
+	background: rgb(199,195,33);
+	color:#fff;
+	font-size: 22px;
+	border:3px solid #ccc; 	
+}
+.graph-head h3 {
+    font-size: 15px;
+}
+tr.strong-tr td {
+    font-weight: 600;
+    text-align: center;
+}
+table.table tr {
+    text-align: center;
+}
+.abc-inner1 h2 {
+    text-decoration: underline;
+    font-size: 24px;
+	color:#fff;
+}
+.table {
+    width: 100%;
+    margin-bottom: -20px !important;
+}
+.padding-1{padding:0 !important;}
+table.table td {
+    border: NONE !IMPORTANT;
+}
+table.table TR TD {
+    font-size: 16px;
+}
+.graph-sec{margin-top:30px;}
+table.table.table1 {
+    width: 70%;
 }

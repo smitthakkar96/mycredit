@@ -1,16 +1,51 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ionden.com/a/plugins/ion.rangeSlider/static/js/ion-rangeSlider/ion.rangeSlider.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
-    <script src="js/angular.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+ <link rel="stylesheet" href="css/nv.d3.css" charset="utf-8">
+ <link rel="stylesheet" href="css/login.css" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="http://ionden.com/a/plugins/ion.rangeSlider/static/css/ion.rangeSlider.css">
+<head>
+    <meta charset="utf-8" />
+    <title>Angular-nvD3  Discrete Bar Chart</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    
+   <script src="js/angular.js"></script>
     <script src="js/d3.js"></script>
     <script src="js/nv.d3.js"></script>
-    <script src="../dist/angularjs-nvd3-directives.js"></script>
-    <link rel="stylesheet" href="stylesheets/nv.d3.css"/>
-    
+	 <script src="js/angularjs-nvd3-directives.js"></script>
+    <link rel="stylesheet" href="css/nv.d3.css"/>
+ 
+  </head>
+<script>
+	var app = angular.module("nvd3TestApp", ['nvd3ChartDirectives']);
+
+        function ExampleCtrl($scope){
+		$scope.exampleData = [
+                {
+                    key: "Cumulative Return",
+                    values: [
+                        ["A", -29.765957771107 ],
+                        ["B" , 0 ],
+                        ["C" , 32.807804682612 ],
+                        ["D" , 196.45946739256 ],
+                        ["E" , 0.19434030906893 ],
+                        ["F" , -98.079782601442 ],
+                        ["G" , -13.925743130903 ],
+                        ["H" , -5.1387322875705 ]
+                    ]
+                }
+            ];
+		
+		}
+    </script>
 
 
 <!-- <select class="str-outer" ng-init="Select Strategy = options[0]" ng-model="selectedName"  ng-options="x for x in names">
 <option value=""></option>
 </select> -->
-
+<div class="container">
 <nav id="header" class="navbar">
             <div id="header-container" class="container navbar-container" style="background-color:#fff">
                 <div class="navbar-header">
@@ -23,7 +58,6 @@
             </div><!-- /.container -->
 </nav><!-- /.navbar -->
 
-<div class="col-md-12 fleft">
  <div class="row">
 	  <div class="tabs-start">
 	<div class="col-md-4 padding-0">
@@ -52,8 +86,20 @@
 </select>
 </div>
 </div>
+<div class="col-md-10 fleft heading">
+<div class="col-md-9 fleft">
+<h1>My Stratregies</h1>
 </div>
-
+<div class="col-md-3 fright right-buttons">
+<div class="col-md-12" style="text-align:right;">
+<button type="button" class="btn btn-default add-filter1">Add</button>
+</div>
+<div class="col-md-12" style="text-align:right;">
+<button type="button" class="btn btn-default add-filter1">Edit</button>
+</div>
+</div>
+</div>
+</div>
     <!-- <nvd3-discrete-bar-chart
             data="exampleData"
             id="exampleId"
@@ -101,11 +147,14 @@
             showValues="true">
         <svg></svg>
     </nvd3-discrete-bar-chart> -->
-	<div class="contain">
+	 <body ng-app='nvd3TestApp'>
+
+<div ng-controller="ExampleCtrl">
+<div class="contain">
         <div class="outer">
 			<div class="col-md-4 col-xs-12 col-sm-10 padding-0 abc" >
 				 <div class="abc-inner1">
-				  <div class="col-md-12 fleft">
+				 <div class="col-md-12 fleft">
 				  <table class="table">
     <tbody>
       <tr>
@@ -139,7 +188,7 @@
 
             <div class="col-md-4 col-xs-12 col-sm-10 padding-0 abc">
 						 <div class="abc-inner1">
-						  <div class="col-md-12 fleft">
+						 <div class="col-md-12 fleft">
 				  <table class="table">
     <tbody>
       <tr>
@@ -174,7 +223,7 @@
 
               <div class="col-md-4 col-xs-12 col-sm-10 padding-0 abc">
 						  <div class="abc-inner1">
-						   <div class="col-md-12 fleft">
+						  <div class="col-md-12 fleft">
 				  <table class="table">
     <tbody>
       <tr>
@@ -208,7 +257,7 @@
 			  
 			  <div class="col-md-4 col-xs-12 col-sm-10 padding-0 abc">
 						   <div class="abc-inner1">
-						    <div class="col-md-12 fleft">
+						   <div class="col-md-12 fleft">
 				  <table class="table">
     <tbody>
       <tr>
@@ -242,7 +291,10 @@
         </div>
 		</div>
     </div>
-  </div>
+</div>
+</div>
+</body>
+</html>
 
 
 
