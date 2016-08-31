@@ -23,7 +23,10 @@ angular.module('Authentication')
             /* Use this for real authentication
              ----------------------------------------------*/
             $http.post('https://198.211.106.93/api/login', { email: email, password: password })
-                .success(function (response) {
+              .success(function (response) {
+                    callback(response);
+                })
+				.error(function (response) {
                     callback(response);
                 });
 
