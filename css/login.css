@@ -421,7 +421,7 @@ button.login-button-1 {
 .group.sign-up {
     margin-top: 10px;
 }
-button.login-button-11 {
+button.login-button.ee {
     width: 51%;
     margin-top: 10%;
     background: rgb(199,195,33);
@@ -706,4 +706,13 @@ table.table TR TD {
 .graph-sec{margin-top:30px;}
 table.table.table1 {
     width: 70%;
+}
+button.login-button1 {
+    margin-top: 25px;
+    width: 50%;
+    background: rgb(199,195,33);
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    line-height: 29px;
 }

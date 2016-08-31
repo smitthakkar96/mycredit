@@ -7,25 +7,48 @@ angular.module('Authentication')
     function (Base64, $http, $cookieStore, $rootScope, $timeout) {
         var service = {};
 
-        service.Login = function (username, password, callback) {
+        service.Login = function (email, password, callback) {
 
             /* Dummy authentication for testing, uses $timeout to simulate api call
              ----------------------------------------------*/
-            $timeout(function(){
+            /* $timeout(function(){
                 var response = { success: username === 'test123' && password === 'test123' };
                 if(!response.success) {
                     response.message = 'Username or password is incorrect';
                 }
                 callback(response);
-            }, 1000);
+            }, 1000); */
 
 
             /* Use this for real authentication
              ----------------------------------------------*/
-            //$http.post('/api/authenticate', { username: username, password: password })
-            //    .success(function (response) {
-            //        callback(response);
-            //    });
+            $http.post('http://198.211.106.93/api/login', { email: email, password: password })
+                .success(function (response) {
+                    callback(response);
+                });
+
+        };
+		
+		service.Register = function (email, firstName, lastName, password, phone, callback) {
+
+            /* Dummy authentication for testing, uses $timeout to simulate api call
+             ----------------------------------------------*/
+            /* $timeout(function(){
+                var response = { success: username === 'test123' && password === 'test123' };
+                if(!response.success) {
+                    response.message = 'Username or password is incorrect';
+                }
+                callback(response);
+            }, 1000); */
+
+
+   
+          
+            $http.post('http://198.211.106.93/api/signup', { email : email , firstname : firstName ,lastname : lastName, phoneNumber : phone, password : password })
+               .success(function (response) {
+				   
+                   callback(response);
+              });
 
         };
 		
