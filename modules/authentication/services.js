@@ -22,7 +22,7 @@ angular.module('Authentication')
 
             /* Use this for real authentication
              ----------------------------------------------*/
-            $http.post('http://198.211.106.93/api/login', { email: email, password: password })
+            $http.post('https://198.211.106.93/api/login', { email: email, password: password })
                 .success(function (response) {
                     callback(response);
 					console.log(response);
@@ -49,7 +49,7 @@ angular.module('Authentication')
 
    
           
-            $http.post('http://198.211.106.93/api/signup', { email : email , firstname : firstName ,lastname : lastName, phoneNumber : phone, password : password })
+            $http.post('https://198.211.106.93/api/signup', { email : email , firstname : firstName ,lastname : lastName, phoneNumber : phone, password : password })
                .success(function (response) {
 				   
                    callback(response);
