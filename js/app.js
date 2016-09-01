@@ -40,8 +40,8 @@ angular.module('BasicHttpAuthExample', [
         .otherwise({ redirectTo: '/mycredit' });
 }])
  
-.run(['$rootScope', '$location', '$cookieStore', '$http',
-    function ($rootScope, $location, $cookieStore, $http) {
+.run(['$rootScope','$templateCache', '$location', '$cookieStore', '$http',
+    function ($rootScope,$templateCache, $location, $cookieStore, $http) {
         // keep user logged in after page refresh
 			
         $rootScope.globals = $cookieStore.get('globals') || {};
@@ -51,10 +51,21 @@ angular.module('BasicHttpAuthExample', [
         }
  
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
+			$templateCache.removeAll();
             // redirect to login page if not logged in
+			//alert($rootScope.globals.currentUser.username);
+			//alert($location.path);
             if (!$rootScope.globals.currentUser) {
-                
+				
+				
+				$location.path('/mycredit');
             }
+			else if($rootScope.globals.currentUser && $location.path()==='/mycredit')
+			{
+				$location.path('/');
+			}
+			
+			
         });
     }]);
 	

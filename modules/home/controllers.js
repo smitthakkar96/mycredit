@@ -3,9 +3,15 @@
 angular.module('Home')
  
 .controller('HomeController',
-    ['$scope',
-    function ($scope) {
-		
+    ['$scope','$location','AuthenticationService',
+    function ($scope,$location,AuthenticationService) {
+		 
+		 $scope.logout = function () {
+			
+ AuthenticationService.ClearCredentials();
+ $location.path('/mycredit');
+		 };
 
+ 
       
     }]);

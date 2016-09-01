@@ -6,7 +6,8 @@ angular.module('Authentication')
     ['$scope', '$rootScope', '$location', 'AuthenticationService',
     function ($scope, $rootScope, $location, AuthenticationService) {
         // reset login status
-        AuthenticationService.ClearCredentials();
+	
+       // AuthenticationService.ClearCredentials();
  
         $scope.login = function () {
             $scope.dataLoading = true;
@@ -19,8 +20,10 @@ angular.module('Authentication')
 				
                     $location.path('/');
                 } 
-				
+				else
+				{
                     $scope.error = 'Please Login Again';
+				}
                   
               
             });
