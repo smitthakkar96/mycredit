@@ -2,7 +2,7 @@
 
 // declare modules
 angular.module('Authentication', []);
-angular.module('Home', []);
+angular.module('Home',['nvd3ChartDirectives']);
 angular.module("nvd3TestApp", ['nvd3ChartDirectives']);
 
 angular.module('BasicHttpAuthExample', [
@@ -19,6 +19,26 @@ angular.module('BasicHttpAuthExample', [
         .when('/mycredit', {
             controller: 'LoginController',
             templateUrl: 'modules/authentication/views/login.html',
+            hideMenus: true
+        })
+		.when('/marketview', {
+            controller: 'HomeController',
+            templateUrl: 'modules/home/views/marketview.html',
+            hideMenus: true
+        })
+		.when('/add_strategy', {
+            controller: 'HomeController',
+            templateUrl: 'modules/home/views/button.html',
+            hideMenus: true
+        })
+		.when('/newstrategy', {
+            controller: 'LoginController',
+            templateUrl: 'modules/home/views/new-strategy.html',
+            hideMenus: true
+        })
+		.when('/addstrategy', {
+            controller: 'HomeController',
+            templateUrl: 'modules/home/views/addstrategy.html',
             hideMenus: true
         })
  
@@ -51,16 +71,25 @@ angular.module('BasicHttpAuthExample', [
         }
  
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
-			$templateCache.removeAll();
+			//$templateCache.removeAll();
             // redirect to login page if not logged in
 			//alert($rootScope.globals.currentUser.username);
 			//alert($location.path);
-            if (!$rootScope.globals.currentUser) {
+            if (!$rootScope.globals.currentUser && $location.path()==='/register') {
 				
 				
-				$location.path('/mycredit');
+				
+				$location.path('/register');
             }
+			else if(!$rootScope.globals.currentUser)
+			{
+				$location.path('/mycredit');
+			}
 			else if($rootScope.globals.currentUser && $location.path()==='/mycredit')
+			{
+				$location.path('/');
+			}
+			else if($rootScope.globals.currentUser && $location.path()==='/register')
 			{
 				$location.path('/');
 			}
